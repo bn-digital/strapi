@@ -1,6 +1,4 @@
 import { prefixPluginTranslations } from "@strapi/helper-plugin";
-import * as yup from "yup";
-import ColorPickerIcon from "./components/ColorPicker/ColorPickerIcon";
 import UuidIcon from "./components/Uuid/UuidIcon";
 import pluginId from "./pluginId";
 
@@ -12,18 +10,15 @@ export default {
       type: "uid",
       icon: UuidIcon,
       intlLabel: {
-        id: "field-uuid.uuid.label",
+        id: "form.label",
         defaultMessage: "UUID",
       },
       intlDescription: {
-        id: "field-uuid.uuid.description",
-        defaultMessage: "Generate a UUID v4",
+        id: "form.description",
+        defaultMessage: "Generates a UUID v4",
       },
       components: {
-        Input: async () =>
-          import(
-            /* webpackChunkName: "input-component" */ "./components/Uuid/UuidInput"
-          ),
+        Input: async () => import("./components/Uuid/UuidInput"),
       },
       options: {
         base: [],
@@ -63,11 +58,13 @@ export default {
             ],
           },
         ],
-        validator: () => ({}),
+        validator: () => {},
       },
     });
   },
+
   bootstrap(app) {},
+
   async registerTrads({ locales }) {
     const importedTrads = await Promise.all(
       locales.map((locale) => {

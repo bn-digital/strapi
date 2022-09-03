@@ -1,14 +1,19 @@
-import { Box } from '@strapi/design-system/Box'
-import { Field, FieldAction, FieldError, FieldHint, FieldInput, FieldLabel } from '@strapi/design-system/Field'
-import { Flex } from '@strapi/design-system/Flex'
-import { Stack } from '@strapi/design-system/Stack'
-import Refresh from '@strapi/icons/Refresh'
-import React, { useEffect, useRef, useState } from 'react'
-import { useIntl } from 'react-intl'
-import styled from 'styled-components'
-import { v4 } from 'uuid'
-
-const UUID_REGEX = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/i
+import { Box } from "@strapi/design-system/Box";
+import {
+  Field,
+  FieldAction,
+  FieldError,
+  FieldHint,
+  FieldInput,
+  FieldLabel,
+} from "@strapi/design-system/Field";
+import { Flex } from "@strapi/design-system/Flex";
+import { Stack } from "@strapi/design-system/Stack";
+import Refresh from "@strapi/icons/Refresh";
+import React, { useEffect, useRef, useState } from "react";
+import { useIntl } from "react-intl";
+import styled from "styled-components";
+import { v4 } from "uuid";
 
 export const FieldActionWrapper = styled(FieldAction)`
   svg {
@@ -24,35 +29,62 @@ export const FieldActionWrapper = styled(FieldAction)`
       fill: ${({ theme }) => theme.colors.primary600};
     }
   }
-`
+`;
+
+const UUID_REGEX =
+  /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/i;
+
 /**
  *
  * @param description
- * @param placeholder
- * @param disabled
+ * @param {string} placeholder
+ * @param {boolean} disabled
  * @param error
  * @param intlLabel
  * @param labelAction
- * @param name
+ * @param {string} name
  * @param onChange
- * @param required
+ * @param {boolean} required
  * @param {string} value
  * @return {JSX.Element}
  * @constructor
  */
-const UuidInput = ({ description, placeholder, disabled, error, intlLabel, labelAction, name, onChange, required, value }) => {
-  const { formatMessage } = useIntl()
-  const [generated, setGenerated] = useState(value)
-  const ref = useRef(null)
+const UuidInput = ({
+  description,
+  placeholder,
+  disabled,
+  error,
+  intlLabel,
+  labelAction,
+  name,
+  onChange,
+  required,
+  value,
+}) => {
+  const { formatMessage } = useIntl();
+  const [generated, setGenerated] = useState(value ?? v4());
+  const ref = useRef(null);
   useEffect(() => {
     if (generated && ref.current && value !== generated) {
-      ref.current.value = generated
-      onChange({ target: ref.current })
+      ref.current.value = generated;
+      onChange({ target: ref.current });
     }
-  }, [generated])
+  }, [generated]);
   return (
     <Box>
-      <Field id={name} name={name} hint={description} error={!value?.match(UUID_REGEX) ? 'UUID is not valid' : undefined}>
+      <Field
+        id={name}
+        name={name}
+        hint={description && formatMessage(description)}
+        error={
+          error ?? !value.match(UUID_REGEX)
+            ? formatMessage({
+                id: "form.field.error",
+                defaultMessage: "The UUID format is invalid.",
+              })
+            : null
+        }
+      >
         <Stack spacing={1}>
           <Flex>
             <FieldLabel>{formatMessage(intlLabel)}</FieldLabel>
@@ -63,10 +95,16 @@ const UuidInput = ({ description, placeholder, disabled, error, intlLabel, label
             placeholder={placeholder}
             disabled={disabled}
             requried={required}
-            value={value}
+            value={value.toLowerCase()}
             onChange={onChange}
             endAction={
-              <FieldActionWrapper onClick={() => setGenerated(v4())} label='regenerate'>
+              <FieldActionWrapper
+                onClick={() => setGenerated(v4())}
+                label={formatMessage({
+                  id: "form.field.generate",
+                  defaultMessage: "Generate",
+                })}
+              >
                 <Refresh />
               </FieldActionWrapper>
             }
@@ -76,7 +114,7 @@ const UuidInput = ({ description, placeholder, disabled, error, intlLabel, label
         </Stack>
       </Field>
     </Box>
-  )
-}
+  );
+};
 
-export default UuidInput
+export default UuidInput;

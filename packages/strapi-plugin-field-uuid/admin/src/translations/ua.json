@@ -1,0 +1,6 @@
+{
+  "form.label": "UUID",
+  "form.description": "Генерує UUID версії 4",
+  "form.field.generate": "Згенерувати",
+  "form.field.error": "Формат значення UUID невірний"
+}
