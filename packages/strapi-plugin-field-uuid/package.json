@@ -1,0 +1,26 @@
+{
+  "name": "@bn-digital/strapi-plugin-field-uuid",
+  "version": "1.0.0",
+  "description": "This plugin adds support of UUID field type to Strapi",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "release": "yarn build && yarn npm publish"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@strapi/design-system": "^1.2.2",
+    "@types/uuid": "^8.3.4",
+    "typescript": "^4.8.2"
+  },
+  "strapi": {
+    "name": "field-uuid",
+    "description": "This plugin adds support of UUID field type to Strapi",
+    "kind": "plugin",
+    "displayName": "Field UUID"
+  }
+}

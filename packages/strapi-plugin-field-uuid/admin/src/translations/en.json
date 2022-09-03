@@ -1,0 +1,4 @@
+{
+  "field-uuid.uuid.label": "UUID",
+  "field-uuid.uuid.description": "Generates UUID v4"
+}

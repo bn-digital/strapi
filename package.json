@@ -1,0 +1,10 @@
+{
+  "name": "bn-digital",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@bn-digital/prettier-config": "^2.0.0"
+  },
+  "packageManager": "yarn@3.2.3"
+}
