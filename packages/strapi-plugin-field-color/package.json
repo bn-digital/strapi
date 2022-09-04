@@ -2,7 +2,7 @@
   "name": "@bn-digital/strapi-plugin-field-color",
   "description": "This plugin adds support of color field to Strapi",
   "keywords": ["strapi", "strapi-plugin", "custom-fields", "colorpicker"],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "maintainers": [
     {
