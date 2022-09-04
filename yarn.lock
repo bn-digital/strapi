@@ -192,6 +192,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bn-digital/strapi-plugin-field-color@workspace:packages/strapi-plugin-field-color":
+  version: 0.0.0-use.local
+  resolution: "@bn-digital/strapi-plugin-field-color@workspace:packages/strapi-plugin-field-color"
+  dependencies:
+    "@strapi/design-system": "npm:^1.2.2"
+    "@strapi/helper-plugin": "npm:^4.4.0-alpha.0"
+    "@strapi/icons": "npm:^1.2.2"
+    "@types/styled-components": "npm:^5.1.26"
+    react-intl: "npm:^6.1.0"
+    styled-components: "npm:^5.3.5"
+    typescript: "npm:^4.8.2"
+    yup: "npm:^0.32.11"
+  peerDependencies:
+    "@strapi/strapi": ^4.4.0-alpha.0
+  languageName: unknown
+  linkType: soft
+
 "@bn-digital/strapi-plugin-field-uuid@workspace:packages/strapi-plugin-field-uuid":
   version: 0.0.0-use.local
   resolution: "@bn-digital/strapi-plugin-field-uuid@workspace:packages/strapi-plugin-field-uuid"
@@ -205,7 +222,6 @@ __metadata:
     styled-components: "npm:^5.3.5"
     typescript: "npm:^4.8.2"
     uuid: "npm:^8.3.2"
-    yup: "npm:^0.32.11"
   peerDependencies:
     "@strapi/strapi": ^4.4.0-alpha.0
   languageName: unknown

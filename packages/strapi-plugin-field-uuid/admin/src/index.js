@@ -10,11 +10,11 @@ export default {
       type: "uid",
       icon: UuidIcon,
       intlLabel: {
-        id: "form.label",
+        id: "field-uuid.form.label",
         defaultMessage: "UUID",
       },
       intlDescription: {
-        id: "form.description",
+        id: "field-uuid.form.description",
         defaultMessage: "Generates a UUID v4",
       },
       components: {

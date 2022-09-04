@@ -77,9 +77,9 @@ const UuidInput = ({
         name={name}
         hint={description && formatMessage(description)}
         error={
-          error ?? !value.match(UUID_REGEX)
+          error ?? !value?.match(UUID_REGEX)
             ? formatMessage({
-                id: "form.field.error",
+                id: "field-uuid.form.field.error",
                 defaultMessage: "The UUID format is invalid.",
               })
             : null
@@ -95,13 +95,13 @@ const UuidInput = ({
             placeholder={placeholder}
             disabled={disabled}
             requried={required}
-            value={value.toLowerCase()}
+            value={value?.toLowerCase()}
             onChange={onChange}
             endAction={
               <FieldActionWrapper
-                onClick={() => setGenerated(v4())}
+                onClick={() => !disabled && setGenerated(v4())}
                 label={formatMessage({
-                  id: "form.field.generate",
+                  id: "field-uuid.form.field.generate",
                   defaultMessage: "Generate",
                 })}
               >
