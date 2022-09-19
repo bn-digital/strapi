@@ -1,9 +1,15 @@
 {
   "name": "@bn-digital/strapi-plugin-field-uuid",
   "description": "This plugin adds support of UUID field type to Strapi",
-  "keywords": ["strapi", "strapi-plugin", "custom-fields", "uuid"],
-  "version": "1.0.6",
+  "keywords": [
+    "strapi",
+    "strapi-plugin",
+    "custom-fields",
+    "uuid"
+  ],
+  "version": "1.1.4",
   "license": "MIT",
+  "readme": "README.md",
   "maintainers": [
     {
       "name": "BN Enginseers",
@@ -33,20 +39,20 @@
     "release": "yarn build && yarn npm publish"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^4.4.0-alpha.0"
+    "@strapi/strapi": "^4.4.0-beta.4"
   },
   "dependencies": {
-    "uuid": "^8.3.2"
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@strapi/design-system": "^1.2.2",
-    "@strapi/helper-plugin": "^4.4.0-alpha.0",
+    "@strapi/helper-plugin": "^4.4.0-beta.4",
     "@strapi/icons": "^1.2.2",
-    "@types/styled-components": "^5.1.26",
-    "@types/uuid": "^8.3.4",
-    "react-intl": "^6.1.0",
+    "@types/styled-components": "latest",
+    "@types/uuid": "latest",
+    "react-intl": "^6.1.1",
     "styled-components": "^5.3.5",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.3"
   },
   "strapi": {
     "name": "field-uuid",

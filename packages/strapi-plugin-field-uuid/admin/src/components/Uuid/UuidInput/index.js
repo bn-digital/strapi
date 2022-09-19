@@ -1,19 +1,12 @@
-import { Box } from "@strapi/design-system/Box";
-import {
-  Field,
-  FieldAction,
-  FieldError,
-  FieldHint,
-  FieldInput,
-  FieldLabel,
-} from "@strapi/design-system/Field";
-import { Flex } from "@strapi/design-system/Flex";
-import { Stack } from "@strapi/design-system/Stack";
-import Refresh from "@strapi/icons/Refresh";
-import React, { useEffect, useRef, useState } from "react";
-import { useIntl } from "react-intl";
-import styled from "styled-components";
-import { v4 } from "uuid";
+import { Box } from '@strapi/design-system/Box'
+import { Field, FieldAction, FieldError, FieldHint, FieldInput, FieldLabel } from '@strapi/design-system/Field'
+import { Flex } from '@strapi/design-system/Flex'
+import { Stack } from '@strapi/design-system/Stack'
+import Refresh from '@strapi/icons/Refresh'
+import React, { useEffect, useRef, useState } from 'react'
+import { useIntl } from 'react-intl'
+import styled from 'styled-components'
+import { v4 } from 'uuid'
 
 export const FieldActionWrapper = styled(FieldAction)`
   svg {
@@ -29,10 +22,9 @@ export const FieldActionWrapper = styled(FieldAction)`
       fill: ${({ theme }) => theme.colors.primary600};
     }
   }
-`;
+`
 
-const UUID_REGEX =
-  /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/i;
+const UUID_REGEX = /^[0-9a-fA-F]{8}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{4}\b-[0-9a-fA-F]{12}$/i
 
 /**
  *
@@ -49,27 +41,16 @@ const UUID_REGEX =
  * @return {JSX.Element}
  * @constructor
  */
-const UuidInput = ({
-  description,
-  placeholder,
-  disabled,
-  error,
-  intlLabel,
-  labelAction,
-  name,
-  onChange,
-  required,
-  value,
-}) => {
-  const { formatMessage } = useIntl();
-  const [generated, setGenerated] = useState(value ?? v4());
-  const ref = useRef(null);
+const UuidInput = ({ description, placeholder, disabled, error, intlLabel, labelAction, name, onChange, required, value }) => {
+  const { formatMessage } = useIntl()
+  const [generated, setGenerated] = useState(value ?? v4())
+  const ref = useRef(null)
   useEffect(() => {
     if (generated && ref.current && value !== generated) {
-      ref.current.value = generated;
-      onChange({ target: ref.current });
+      ref.current.value = generated
+      onChange({ target: ref.current })
     }
-  }, [generated]);
+  }, [generated])
   return (
     <Box>
       <Field
@@ -79,8 +60,8 @@ const UuidInput = ({
         error={
           error ?? !value?.match(UUID_REGEX)
             ? formatMessage({
-                id: "field-uuid.form.field.error",
-                defaultMessage: "The UUID format is invalid.",
+                id: 'field-uuid.form.field.error',
+                defaultMessage: 'The UUID format is invalid.',
               })
             : null
         }
@@ -101,8 +82,8 @@ const UuidInput = ({
               <FieldActionWrapper
                 onClick={() => !disabled && setGenerated(v4())}
                 label={formatMessage({
-                  id: "field-uuid.form.field.generate",
-                  defaultMessage: "Generate",
+                  id: 'field-uuid.form.field.generate',
+                  defaultMessage: 'Generate',
                 })}
               >
                 <Refresh />
@@ -114,7 +95,7 @@ const UuidInput = ({
         </Stack>
       </Field>
     </Box>
-  );
-};
+  )
+}
 
-export default UuidInput;
+export default UuidInput

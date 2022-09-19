@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "allowJs": true,
-    "outDir": "dist",
-    "baseUrl": ".",
-    "resolveJsonModule": true
-  },
-  "include": ["./**/*"],
-}

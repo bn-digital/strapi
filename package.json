@@ -1,10 +1,13 @@
 {
   "name": "bn-digital",
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "@bn-digital/prettier-config": "^2.0.0",
-    "@types/react": "^17.0.49",
-    "react": "17.0.2"
+    "@strapi/strapi": "^4.4.0-beta.4",
+    "@types/react": "latest",
+    "react": "latest"
   },
   "packageManager": "yarn@3.2.3",
   "prettier": "@bn-digital/prettier-config"
