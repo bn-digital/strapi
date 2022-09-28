@@ -1,0 +1,50 @@
+{
+  "name": "@bn-digital/strapi-types",
+  "description": "Additional Strapi typescript definitions",
+  "keywords": [
+    "strapi",
+    "types"
+  ],
+  "version": "1.0.40",
+  "license": "MIT",
+  "readme": "README.md",
+  "maintainers": [
+    {
+      "name": "BN Enginseers",
+      "email": "dev@bndigital.co",
+      "url": "https://github.com/bn-digital"
+    }
+  ],
+  "author": {
+    "name": "Vlad Volkov",
+    "email": "vlad@hiberbee.com",
+    "url": "https://github.com/VladyslavVolkov"
+  },
+  "repository": {
+    "url": "https://github.com/bn-digital/strapi",
+    "type": "git",
+    "directory": "packages/types"
+  },
+  "bugs": {
+    "url": "https://github.com/bn-digital/strapi/issues",
+    "email": "dev@bndigital.co"
+  },
+  "types": "index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc",
+    "release": "yarn build && yarn npm publish"
+  },
+  "dependencies": {
+    "@strapi/strapi": "^4.3.0",
+    "nexus": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/knex": "latest",
+    "@types/koa": "latest",
+    "@types/node": "latest",
+    "typescript": "^4.8.4"
+  }
+}

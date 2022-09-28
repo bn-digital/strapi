@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "checkJs": false,
+    "importHelpers": true,
+    "lib": [
+      "ES6"
+    ],
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "types": [
+      "@strapi/strapi"
+    ]
+  },
+  "include": ["*.d.ts"]
+}

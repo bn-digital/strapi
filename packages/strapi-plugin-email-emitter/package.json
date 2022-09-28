@@ -1,0 +1,49 @@
+{
+  "name": "@bn-digital/strapi-plugin-email-emitter",
+  "description": "Strapi plugin to send emails based on entity lifecycle or schedule rules",
+  "license": "MIT",
+  "version": "1.0.16",
+  "keywords": [
+    "strapi",
+    "strapi plugin",
+    "email",
+    "email delivery"
+  ],
+  "strapi": {
+    "name": "email-emitter",
+    "description": "Strapi plugin to send emails based on entity lifecycle or schedule rules",
+    "kind": "plugin"
+  },
+  "maintainers": [
+    {
+      "name": "BN Enginseer",
+      "email": "dev@bndigital.co",
+      "url": "https://github.com/bn-enginseer"
+    }
+  ],
+  "author": {
+    "name": "Vlad Volkov",
+    "email": "vlad.volkov@bndigital.co",
+    "url": "https://github.com/vladyslavvolkov"
+  },
+  "types": "index.d.ts",
+  "peerDependencies": {
+    "@strapi/plugin-email": "^4.0.0",
+    "@strapi/strapi": "^4.0.0",
+    "strapi-plugin-email-designer": "^2.0.0"
+  },
+  "dependencies": {
+    "@strapi/helper-plugin": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "release": "yarn build && yarn npm publish"
+  }
+}

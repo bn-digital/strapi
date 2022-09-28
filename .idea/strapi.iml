@@ -5,6 +5,8 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/packages/strapi-plugin-field-uuid/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/packages/strapi-plugin-email-emitter/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/.yarn" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

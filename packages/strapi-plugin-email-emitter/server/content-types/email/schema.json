@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "email_emitter_emails",
+  "info": {
+    "singularName": "email",
+    "pluralName": "emails",
+    "displayName": "Email",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "delivered": {
+      "type": "boolean",
+      "required": true,
+      "configurable": false,
+      "default": false
+    },
+    "scheduled": {
+      "type": "boolean",
+      "required": true,
+      "configurable": false,
+      "default": false
+    },
+    "template": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::email-designer.email-template"
+    },
+    "payload": {
+      "type": "json",
+      "required": false
+    },
+    "log": {
+      "type": "text",
+      "required": false
+    }
+  }
+}
