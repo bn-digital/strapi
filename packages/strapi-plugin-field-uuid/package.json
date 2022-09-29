@@ -39,7 +39,7 @@
     "release": "yarn build && yarn npm publish"
   },
   "peerDependencies": {
-    "@strapi/strapi": "^4.4.0-rc.1"
+    "@strapi/strapi": "^4.4.0"
   },
   "dependencies": {
     "uuid": "^9.0.0"
