@@ -28,6 +28,6 @@ It is recommended to make field non-editable (as part of Strapi view configurati
 
 ### Screenshots
 
-![Screenshot of the UUID field in the Content Type Builder](https://raw.githubusercontent.com/bn-digital/strapi/packages/strapi-plugin-field-uuid/latest/screenshots/add-custom-field.png)
+![Screenshot of the UUID field in the Content Type Builder](https://github.com/bn-digital/strapi/blob/latest/packages/strapi-plugin-field-uuid/docs/add-custom-field.png?raw=true)
 
-![Screenshot of the UUID field in the Content Manager](https://raw.githubusercontent.com/bn-digital/strapi/packages/strapi-plugin-field-uuid/latest/screenshots/edit-content.png)
+![Screenshot of the UUID field in the Content Manager](https://github.com/bn-digital/strapi/blob/latest/packages/strapi-plugin-field-uuid/docs/create-entity.png?raw=true)
