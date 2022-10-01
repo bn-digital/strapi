@@ -1,3 +1,4 @@
-# Strapi plugin email-emitter
+# # Strapi plugin: Email Emitter
 
-A quick description of email-emitter.
+
+
