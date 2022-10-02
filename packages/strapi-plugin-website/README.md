@@ -1,4 +1,4 @@
-# # Strapi plugin: Website
+# Strapi plugin: Website
 
 **Work in progress**
 
