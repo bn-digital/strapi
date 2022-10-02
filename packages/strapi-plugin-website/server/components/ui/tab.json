@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_ui_tabs",
+  "info": {
+    "displayName": "Tab",
+    "icon": "clone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "pane": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.card",
+      "required": true
+    }
+  }
+}

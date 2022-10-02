@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_contact_uses",
+  "info": {
+    "displayName": "Contact Us",
+    "icon": "mail-bulk",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pathname": {
+      "type": "string",
+      "required": true,
+      "default": "/",
+      "unique": false
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "data.contact"
+    }
+  }
+}

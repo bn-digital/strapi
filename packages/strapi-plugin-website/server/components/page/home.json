@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_page_homes",
+  "info": {
+    "displayName": "Home",
+    "icon": "home",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "pathname": {
+      "type": "string",
+      "default": "/",
+      "required": true
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.card"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.card"
+    }
+  }
+}

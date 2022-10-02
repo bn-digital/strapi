@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_ui_texts",
+  "info": {
+    "displayName": "Text",
+    "icon": "indent",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "children": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.paragraph",
+      "required": true,
+      "min": 1
+    }
+  }
+}

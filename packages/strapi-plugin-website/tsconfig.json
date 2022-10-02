@@ -1,0 +1,21 @@
+{
+  "extends": "@strapi/typescript-utils/tsconfigs/server",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": ".",
+    "strict": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "*.d.ts",
+    "server",
+    "./package.json",
+    "server/**/*.json"
+  ],
+  "exclude": [
+    "node_modules/",
+    "dist/",
+    "admin/",
+    "**/*.test.ts"
+  ]
+}

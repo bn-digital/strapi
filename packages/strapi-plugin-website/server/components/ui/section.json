@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_ui_sections",
+  "info": {
+    "displayName": "Section",
+    "icon": "pager",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.card"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "ui.link"
+    }
+  }
+}

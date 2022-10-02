@@ -3,5 +3,9 @@
 ## Plugins
 
 - [Field UUID](packages/strapi-plugin-field-uuid)
-- [Field Color](packages/strapi-plugin-field-color)
+- [Email Emitter](packages/strapi-plugin-email-emitter)
+- [Website](packages/strapi-plugin-website)
 
+## SDK
+
+- [Type Definitions](packages/strapi-types)

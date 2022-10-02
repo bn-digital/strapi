@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_data_entries",
+  "info": {
+    "displayName": "Entry",
+    "icon": "clipboard-list",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "key": {
+      "type": "string",
+      "required": false
+    },
+    "value": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

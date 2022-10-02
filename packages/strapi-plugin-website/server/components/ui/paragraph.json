@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_ui_paragraphs",
+  "info": {
+    "displayName": "Paragraph",
+    "icon": "envelope-open-text"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

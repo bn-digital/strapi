@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_ui_contacts",
+  "info": {
+    "displayName": "Contact",
+    "icon": "address-book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": false
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
+    }
+  }
+}

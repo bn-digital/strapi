@@ -1484,6 +1484,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@bn-digital/strapi-plugin-website@workspace:packages/strapi-plugin-website":
+  version: 0.0.0-use.local
+  resolution: "@bn-digital/strapi-plugin-website@workspace:packages/strapi-plugin-website"
+  dependencies:
+    "@strapi/helper-plugin": "npm:^4.0.0"
+    typescript: "npm:^4.8.4"
+  peerDependencies:
+    "@strapi/strapi": ^4.0.0
+  languageName: unknown
+  linkType: soft
+
 "@bn-digital/strapi-types@workspace:packages/strapi-types":
   version: 0.0.0-use.local
   resolution: "@bn-digital/strapi-types@workspace:packages/strapi-types"

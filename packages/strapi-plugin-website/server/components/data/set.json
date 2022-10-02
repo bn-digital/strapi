@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_data_sets",
+  "info": {
+    "displayName": "Set",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

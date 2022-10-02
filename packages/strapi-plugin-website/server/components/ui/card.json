@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_ui_cards",
+  "info": {
+    "displayName": "Card",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "media": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

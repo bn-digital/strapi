@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/strapi.iml" filepath="$PROJECT_DIR$/.idea/strapi.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/strapi-plugin-email-emitter/strapi-plugin-email-emitter.iml" filepath="$PROJECT_DIR$/packages/strapi-plugin-email-emitter/strapi-plugin-email-emitter.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/strapi-plugin-field-uuid/strapi-plugin-field-uuid.iml" filepath="$PROJECT_DIR$/packages/strapi-plugin-field-uuid/strapi-plugin-field-uuid.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/strapi-plugin-website/strapi-plugin-website.iml" filepath="$PROJECT_DIR$/packages/strapi-plugin-website/strapi-plugin-website.iml" />
       <module fileurl="file://$PROJECT_DIR$/packages/strapi-types/strapi-types.iml" filepath="$PROJECT_DIR$/packages/strapi-types/strapi-types.iml" />
     </modules>
   </component>

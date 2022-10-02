@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_ui_headlines",
+  "info": {
+    "displayName": "Headline",
+    "icon": "heading",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    }
+  }
+}
