@@ -15,6 +15,7 @@
   },
   "version": "1.1.7",
   "homepage": "https://github.com/bn-digital/strapi/tree/latest/packages/strapi-plugin-field-uuid#readme",
+  "readme": "https://github.com/bn-digital/strapi/tree/latest/packages/strapi-plugin-field-uuid#readme",
   "license": "MIT",
   "maintainers": [
     {
