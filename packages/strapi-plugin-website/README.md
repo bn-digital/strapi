@@ -1,4 +1,4 @@
-# # Strapi plugin: Email Emitter
+# # Strapi plugin: Website
 
 **Work in progress**
 
