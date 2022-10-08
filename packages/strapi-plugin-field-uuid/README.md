@@ -1,5 +1,10 @@
 # Strapi plugin: UUID Field
 
+<div align="center">
+<img src="https://img.shields.io/npm/dw/@bn-digital/strapi-plugin-field-uuid?style=flat-square" alt="downloads" />
+<img src="https://img.shields.io/npm/v/@bn-digital/strapi-plugin-field-uuid?style=flat-square" alt="version" />
+</div>
+
 This plugin adds a UUID field type to Strapi.
 
 ## Table of Contents
