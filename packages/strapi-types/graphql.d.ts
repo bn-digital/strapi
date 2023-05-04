@@ -1,12 +1,13 @@
-export namespace Graphql {
-  import { ParameterizedContext } from 'koa'
-  import { Policy } from '@strapi/strapi/lib/core/registries/policies'
-  import { PluginConfig, FieldResolver, core } from 'nexus'
-  import { UsersPermissions } from './users-permissions'
+namespace Graphql {
+  import { ParameterizedContext } from "koa"
+  import { Policy } from "@strapi/strapi/lib/core/registries/policies"
+  import { PluginConfig, FieldResolver, core } from "@nexus/schema"
 
-  type CRUDAction = 'create' | 'find' | 'findOne' | 'update' | 'delete'
+  type CRUDAction = "create" | "find" | "findOne" | "update" | "delete"
 
-  type Plugin = { service<T = any>(name: 'extension' | 'content-api' | 'type-registry' | 'format'): T }
+  interface Plugin extends Strapi.GenericPlugin {
+    service<T = any>(name: "extension" | "content-api" | "type-registry" | "format"): T
+  }
 
   type ResolverContext = ParameterizedContext<{ user: UsersPermissions.UserEntity }>
 

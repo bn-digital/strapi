@@ -4,9 +4,8 @@
     "packages/*"
   ],
   "devDependencies": {
-    "@bn-digital/prettier-config": "^2.0.2",
-    "@strapi/strapi": "^4.4.1",
-    "@types/react": "latest"
+    "@bn-digital/prettier-config": "^2.3.7",
+    "@strapi/strapi": "^4.10.1"
   },
   "packageManager": "yarn@3.2.3",
   "prettier": "@bn-digital/prettier-config"

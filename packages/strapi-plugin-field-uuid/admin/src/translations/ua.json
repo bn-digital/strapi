@@ -2,5 +2,6 @@
   "form.label": "UUID",
   "form.description": "Генерує UUID версії 4",
   "form.field.generate": "Згенерувати",
+  "form.field.regex": "Регулярний вираз для перевірки формату UUID.",
   "form.field.error": "Формат значення UUID невірний"
 }

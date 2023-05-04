@@ -1,12 +1,12 @@
-export namespace Database {
-  import { Event as LifecycleEvent } from '@strapi/database/lib/lifecycles'
-  import { Knex } from 'knex'
+import { Event as LifecycleEvent } from "@strapi/database/lib/lifecycles"
+import { Knex } from "knex"
 
+declare namespace Database {
   type Config = {
     connection: Knex.Config
   }
 
-  type Client = 'sqlite' | 'postgres' | 'mysql'
+  type Client = "sqlite" | "postgres" | "mysql"
 
   type BeforeLifecycleEvent<T = any> = LifecycleEvent
 

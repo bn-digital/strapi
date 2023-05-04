@@ -1,62 +1,75 @@
-import { prefixPluginTranslations } from '@strapi/helper-plugin'
-import UuidIcon from './components/Uuid/UuidIcon'
-import pluginId from './pluginId'
+import { prefixPluginTranslations } from "@strapi/helper-plugin"
+import UuidIcon from "./components/Uuid/UuidIcon"
+import pluginId from "./pluginId"
+import getTrad from "./utils/getTrad"
 
 export default {
   register(app) {
     app.customFields.register({
-      name: 'uuid',
+      name: "uuid",
       pluginId,
-      type: 'uid',
+      type: "string",
       icon: UuidIcon,
       intlLabel: {
-        id: 'field-uuid.form.label',
-        defaultMessage: 'UUID',
+        id: getTrad("form.label"),
+        defaultMessage: "UUID",
       },
       intlDescription: {
-        id: 'field-uuid.form.description',
-        defaultMessage: 'Generates a UUID v4',
+        id: getTrad("form.description"),
+        defaultMessage: "Generates a UUID v4",
       },
       components: {
-        Input: async () => import('./components/Uuid/UuidInput'),
+        Input: async () => import("./components/Uuid/UuidInput"),
       },
       options: {
         base: [],
         advanced: [
           {
+            intlLabel: {
+              id: getTrad("form.field.regex"),
+              defaultMessage: "The Regexp pattern to validate the UUID format.",
+            },
+            name: "regex",
+            type: "text",
+            defaultValue: "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$",
+            description: {
+              id: getTrad("color-picker.options.advanced.regex.description"),
+              defaultMessage: "The text of the regular expression",
+            },
+          },
+          {
             sectionTitle: {
-              id: 'global.settings',
-              defaultMessage: 'Settings',
+              id: "global.settings",
+              defaultMessage: "Settings",
             },
             items: [
               {
-                name: 'required',
-                type: 'checkbox',
+                name: "required",
+                type: "checkbox",
                 intlLabel: {
-                  id: 'form.attribute.item.requiredField',
-                  defaultMessage: 'Required field',
+                  id: "form.attribute.item.requiredField",
+                  defaultMessage: "Required field",
                 },
                 description: {
-                  id: 'form.attribute.item.requiredField.description',
+                  id: "form.attribute.item.requiredField.description",
                   defaultMessage: "You won't be able to create an entry if this field is empty",
                 },
               },
               {
-                name: 'private',
-                type: 'checkbox',
+                name: "private",
+                type: "checkbox",
                 intlLabel: {
-                  id: 'form.attribute.item.privateField',
-                  defaultMessage: 'Private field',
+                  id: "form.attribute.item.privateField",
+                  defaultMessage: "Private field",
                 },
                 description: {
-                  id: 'form.attribute.item.privateField.description',
-                  defaultMessage: 'This field will not show up in the API response',
+                  id: "form.attribute.item.privateField.description",
+                  defaultMessage: "This field will not show up in the API response",
                 },
               },
             ],
           },
         ],
-        validator: () => {},
       },
     })
   },
@@ -79,7 +92,7 @@ export default {
               locale,
             }
           })
-      }),
+      })
     )
 
     return Promise.resolve(importedTrads)

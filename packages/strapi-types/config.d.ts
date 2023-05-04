@@ -1,8 +1,6 @@
-export namespace Config {
-  import { Database } from './database'
-
+declare namespace Config {
   type App = {
-    server: Server
+    server: Config.Server
     admin: Admin
     database: Database.Config
     api: Api

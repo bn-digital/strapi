@@ -1,5 +1,5 @@
-export namespace Upload {
-  type FileEntity = {
+declare namespace Upload {
+  interface UploadFile {
     id: string
     src: string
     name: string
@@ -12,6 +12,6 @@ export namespace Upload {
     size: number
     url: string
     previewUrl: string
-    provider: 'aws-s3' | string
+    provider: "aws-s3" | string
   }
 }

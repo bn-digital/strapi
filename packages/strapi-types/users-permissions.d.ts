@@ -1,12 +1,12 @@
-export namespace UsersPermissions {
-  type RoleEntity = {
+declare namespace UsersPermissions {
+  interface RoleEntity {
     id: string
     name: string
     description: string
     type: string
   }
 
-  type UserEntity = {
+  interface UserEntity {
     id: string
     username: string
     email: string
@@ -17,16 +17,11 @@ export namespace UsersPermissions {
     role: RoleEntity
   }
 
-  type ChangePasswordPayload = {
-    oldPassword: string
-    newPassword: string
-  }
-
-  type AuthContext = { user: UserEntity }
+  type AuthContext<T = UserEntity> = { user: Partial<T> }
 
   interface UserService {
     validatePassword(hash: string, newPassword: string): Promise<boolean>
-    edit(id: string, params: Partial<UserEntity>): Promise<UserEntity>
-    fetch(id: string, params?: { populate?: (keyof UserEntity | string)[] | string }): Promise<UserEntity | null>
+    edit<T = UserEntity>(id: string, params: Partial<T>): Promise<T>
+    fetch<T = UserEntity>(id: string, params?: { populate?: (keyof T | string)[] | string }): Promise<T | null>
   }
 }

@@ -1,18 +1,20 @@
 {
+  "files": [
+    "*.d.ts"
+  ],
   "compilerOptions": {
-    "allowJs": false,
-    "allowSyntheticDefaultImports": true,
-    "checkJs": false,
-    "importHelpers": true,
+    "module": "commonjs",
     "lib": [
-      "ES6"
+      "es6"
     ],
-    "module": "CommonJS",
-    "moduleResolution": "Node",
-    "skipLibCheck": true,
-    "types": [
-      "@strapi/strapi"
-    ]
-  },
-  "include": ["*.d.ts"]
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "exactOptionalPropertyTypes": true,
+    "noEmit": true,
+    "forceConsistentCasingInFileNames": true
+  }
 }

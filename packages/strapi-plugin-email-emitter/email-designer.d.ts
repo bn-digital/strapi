@@ -17,12 +17,16 @@ declare namespace Strapi {
       }
     }
 
-    interface TemplateService {
+    type TemplateService = {
       findOne(params: Partial<TemplateEntity>): Promise<TemplateEntity | null>
     }
 
     interface EmailService {
-      sendTemplatedEmail<T = any>(email: Email.EmailInput, template: Partial<TemplateEntity>, payload: T): Promise<{ response: string }>
+      sendTemplatedEmail<T = any>(
+        email: Email.EmailInput,
+        template: Partial<TemplateEntity>,
+        payload: T
+      ): Promise<{ response: string }>
     }
   }
 }
