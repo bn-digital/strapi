@@ -3,6 +3,7 @@ import {Middleware} from "koa";
 import {GenericService} from "@strapi/strapi/lib/core-api/service";
 import type { CollectionTypeService, SingleTypeService } from '@strapi/strapi/lib/core-api/service'
 import {EntityService} from "@strapi/strapi/lib/services/entity-service";
+import http from 'http'
 
 declare namespace Strapi {
     type LogLevel = 'info' | 'warn' | 'error'
@@ -45,6 +46,7 @@ declare namespace Strapi {
     }
 
     interface ServerApp {
+        httpServer: http.Server
         listRoutes(): Server.Route[]
     }
 
