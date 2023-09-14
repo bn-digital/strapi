@@ -51,10 +51,12 @@ const UuidInput = ({
   const [value, setValue] = useState(initialValue ?? v4())
   const ref = useRef(null)
   useEffect(() => {
-    if (ref?.current) {
+    if (value && ref?.current && initialValue !== value) {
       ref.current.value = value
+      onChange({ target: ref.current })
     }
   }, [value])
+
 
   return (
     <Box>
